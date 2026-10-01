@@ -1,0 +1,360 @@
+{
+  "info": {
+    "_postman_id": "248e5206-bc84-4b02-82b7-b7491369fbc4",
+    "name": "Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58106126",
+    "_collection_link": "https://go.postman.co/collection/58106126-248e5206-bc84-4b02-82b7-b7491369fbc4?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Clean Code\",\r\n    \"author\": \"Robert Martin\",\r\n    \"isbn\": \"9780132350884\",\r\n    \"publisher\": \"Prentice Hall\",\r\n    \"year\": 2008,\r\n    \"price\": 34.99,\r\n    \"totalCopies\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/books",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/books",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Gett Book by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter Books by Author",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/books?author=Robert Martin",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ],
+          "query": [
+            {
+              "key": "author",
+              "value": "Robert Martin"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Clean Code (2nd Edition)\",\r\n    \"author\": \"Robert Martin\",\r\n    \"isbn\": \"9780132350884\",\r\n    \"publisher\": \"Prentice Hall\",\r\n    \"year\": 2008,\r\n    \"price\": 39.99,\r\n    \"totalCopies\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Members",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Jane Doe\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"memberStatus\": \"ACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/members",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "members"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Members",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/members",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "members"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Member by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/members/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "members",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Member",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Jane Doe-Smith\",\r\n    \"email\": \"jane.smith@example.com\",\r\n    \"memberStatus\": \"ACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/members/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "members",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Member",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/members/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "members",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Checkout Book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"memberId\": 1, \"bookId\": 1}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/loans",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "loans"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Return Book",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/loans/1/return",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "loans",
+            "1",
+            "return"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Loans",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/loans",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "loans"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Loan by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/loans/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "loans",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Overdue Loans",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/loans/overdue",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "loans",
+            "overdue"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
